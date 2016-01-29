@@ -1,0 +1,364 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Lemon/Milk';
+    src: url('../fonts/lemonmilk-webfont.eot');
+    src: url('../fonts/lemonmilk-webfont.woff') format('woff'),
+         url('../fonts/lemonmilk-webfont.ttf') format('truetype'),
+         url('../fonts/lemonmilk-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+?/* A variation on Eric Meyer's CSS Reset:
+   This is disabled because the Blueprint framework already has it.
+   You should enable it if you aren't using Blueprint. */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+abbr,acronym {
+	border:0;
+}
+
+body {
+	background-color: #e6e9f0;
+	color: #431c5d;
+	font-size: 1,2em;
+	font-family: 'PT Sans', arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3{
+	font-family: 'PT Sans', sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+.wrapper, .info {
+	width: 100%;
+	max-width: 700px;
+	position: relative;	
+}
+
+.wrapper {
+	margin: 3.5em auto 0;
+}
+
+.logo {
+	margin: 0 auto;
+	width: 213px;
+	height: 48px;
+	background: url("../images/sprite.png") 0 0;
+}
+
+main {
+	padding: 3em 0 0;
+}
+
+.score p, .timer p, .object-image, .letter-bgr {
+	line-height: 0;
+}
+
+.score p, .timer p, .progress-bar p, .more-info p {
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.score {
+	float: left;
+}
+
+.star-icon, .timer-icon {
+	height: 31px;
+	display: inline-block;
+	margin: 0 .8em 0 0;
+	vertical-align: middle;
+}
+
+.star-icon {
+	width: 32px;
+	background: url("../images/sprite.png") 0 -48px;
+}
+
+.timer-icon {
+	width: 20px;
+	background: url("../images/sprite.png") -32px -48px;
+}
+
+.timer {
+	float: right;
+	color: #fff;
+	background: #e01d39;
+	padding: 8px 18px;
+	position: relative;
+}
+
+.timer-triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #e01d39 transparent transparent;
+	position: absolute;
+	left: 50%;
+	margin: 8px 0 0 -6px;
+}
+
+.object-image {
+	border: 10px solid #fff;
+	clear: both;
+}
+
+.object-image img {
+	width: 100%;
+	max-width: 700px;
+}
+
+.write-word {
+	text-align: center;
+	padding: 1.5em 0 3em;
+}
+
+.letter {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background: #fff;
+	border: 1px solid #dbdee4;
+	margin-right: 5px;
+}
+
+.letter:last-child {
+	margin-right: 0;
+}
+
+.bgr {
+	font-size: 5em;
+	font-family: 'Lemon/Milk', arial, sans-serif;
+	position: absolute;
+	margin: 0 auto;
+	z-index: -100;
+}
+
+.letter-bgr {
+	position: absolute;
+	color: #bccbde;
+	opacity: 0.35;
+}
+
+.a, .f, .b, .d, .n, .ff, .l, .r  {
+	font-size: 90%;
+}
+
+.m, .w, .o {
+	font-size: 110%;
+}
+
+.m, .f {
+	-webkit-transform: rotate(25deg); 
+	-moz-transform: rotate(25deg);
+}
+
+.o, .ff {
+	-webkit-transform: rotate(20deg); 
+	-moz-transform: rotate(20deg);
+}
+
+.w, .d, .r {
+	-webkit-transform: rotate(-20deg); 
+	-moz-transform: rotate(-20deg);
+}
+
+.a {
+	-webkit-transform: rotate(-25deg); 
+	-moz-transform: rotate(-25deg);
+	top: -.7em;
+	left: 1.4em;
+}
+
+.m {
+	top: 0;
+	left: 2.2em;
+}
+
+.g {
+	-webkit-transform: rotate(-18deg); 
+	-moz-transform: rotate(-18deg);
+	top: .3em;
+	left: 4.3em;
+	font-size: 95%;
+}
+
+.w {
+	top: -.8em;
+	left: 5em;
+}
+
+.f {
+	top: .5em;
+	left: 6.7em;
+}
+
+.b {
+	-webkit-transform: rotate(-30deg); 
+	-moz-transform: rotate(-30deg);
+	top: -.6em;
+	left: 8em;
+}
+
+.d {
+	top: 6.2em;
+	left: 1.2em;
+}
+
+.o {
+	top: 5.5em;
+	left: 2em;
+}
+
+.n {
+	-webkit-transform: rotate(35deg); 
+	-moz-transform: rotate(35deg);
+	top: 6.4em;
+	left: 4.14em;
+}
+
+.ff {
+	top: 7em;
+	left: 6em;
+}
+
+.l {
+	-webkit-transform: rotate(-15deg); 
+	-moz-transform: rotate(-15deg);
+	top: 6.8em;
+	left: 7.5em;
+}
+
+.r {
+	top: 6em;
+	left: 8.4em;
+}
+
+.right-bar {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	margin-top: -72px;
+}
+
+.right-bar p {
+	line-height: 70px;
+}
+
+.more-info, .progress-bar {
+	width: 180px;
+	height: 70px;
+	color: #fff;
+	padding: 0 0 0 18px;
+}
+
+.more-info {
+	background: #cdd422;
+}
+
+.progress-bar {
+	background: #431c5d;
+	margin-top: 4px;
+}
+
+.progress-icon, .info-icon {
+	height: 32px;
+	width: 32px;
+	display: inline-block;
+	margin: 0 .8em 0 0;
+	vertical-align: middle;
+}
+
+.info-icon {
+	background: url("../images/sprite.png") -245px 0;
+}
+
+.progress-icon {
+	background: url("../images/sprite.png") -213px 0;
+}
+
+footer {
+	background-color: #bccbde;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-triangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 14px 14px 0 14px;
+	border-color: #e6e9f0 transparent transparent;
+	position: absolute;
+	left: 50%;
+	margin: -20px 0 0 -14px;
+	top: 0;
+}
+
+.info {
+	margin: 0 auto;
+	font-family: 'Pacifico', cursive;
+	font-size: 1.2em;
+}
